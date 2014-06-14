@@ -1,0 +1,73 @@
+README 
+
+CRM [ http://www.crm-ctt.com - hidde AT it DASH combine DOT com ]
+
+Current version is 3.4.3 - Current database version is 3.4.3
+
+-> You need at least MySQL version 4.1 to use CRM-CTT!
+
+INSTALLATION INSTRUCTIONS (for upgrading see the UPGRADING file)
+
+1. Copy all files to a webserver-accessible directory, e.g. http://yoursite.com/crm/.
+
+1a. (optional) For easy installation, typ "chmod 777 config.inc.php" in your installation directory.
+
+2. Point your browser to the installation directory and follow the installation instructions.
+
+2a. (if you did 1a) do a "chmod 755 config.inc.php" in your installation directory. (and a chown if you like)
+
+3. Add a cron job to some machine (could be local, but also remote) to start the email-notifier for entities:
+
+	An example from my cron file: (the cron user doesn't need to be root)
+	
+	# CRM Alarm date manager
+	0 8 * * *       wget http://yoursite.com/crm/duedate-notify-cron.php?password=yourCRONpwd\&reposnr=XXX 1> /dev/null 2> /dev/null
+	0 15 * * *      wget http://yoursite.com/crm/duedate-notify-cron.php?password=yourCRONpwd\&reposnr=XXX 1> /dev/null 2> /dev/null
+
+	This will send an e-mail notification at 8 AM and 3 PM. Entities wich will be mentioned are entities which have
+	an alarm date set to `today`.
+
+	The reposnr=XXX part resembles the repository number you'd like to send notifications for. reposnr=0 for the first, 
+	reposnr=1 for the second and so on (equal to the values in your config file).
+
+	Skip the "1> /dev/null 2> /dev/null" part if you'd like reports mailed to the user under which the crond job runs.
+
+	You can edit the cron script password using the administration interface (change system values, cronpassword). It is 
+	recommended you change this password regularly for it is transmitted in plain text.
+
+	Try the wget (or lynx --source) command first from the command line! It'll give nice output so you'll see if it all works.
+
+6. Use the 'Change system values' option to set a global admin password (admpassword)
+
+7. READ THE ADMINISTRATION MANUAL! There are some variables which you must set!
+
+8. If the directory webdav_fs/ is not writeable by the webserver (the installation procedure mentions this)
+   you will have to change the owner of the directory, e.g. "chown apache.apache webdav_fs/" and, to prevent
+   other users from accessing it, issue a "chmod 700 webdav_fs/". I have no clue how to do this on Windows,
+   but on the other hand, knowing Windows security is not that good, it will probably work out of the box.
+
+9. Done. All settings can be modified using the 'administration' page.
+
+TROUBLESHOOTING / FAQ
+
+There are a few known troubles which you can take a shot at:
+
+- I see warnings like "Notice: Undefined variable: step in ..." 
+
+	The notices about undefined variables are there because you have a rather new version of PHP, which has a 
+	high verbosity level by default, which in your case is probably set to 'notice' instead of 'error'. If you modify your 
+	php.ini and set the notify level to 'errors only' (or something like that) this problem is gone. PHP 
+	can handle undefined variables very well, and I don't get why the latest versions they released have set 
+	the notification standard to such a verbose level.
+
+- When I click the "Go to step 1" button it seems to just refresh the install.php browser screen and go no further.
+
+	This issue is due to another PHP (php.ini) related problem when using one of the latest releases of PHP. 
+	Just set the REGISTER_GLOBALS variable in your php.ini to 'yes' and this problem is solved.
+
+KNOWN ISSUES
+
+- This application does not work correctly when using Konquerer as your browser. Tested are IE and Netscape 6+.
+- The administraton section is not multi-lingual
+- The "Alarm Settings" dialog box is not multi-lingual
+- The manual is only available in English
