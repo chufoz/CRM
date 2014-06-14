@@ -1,0 +1,267 @@
+ 
+/*Estilo de Menu Principal*/
+#navigation {
+            margin: 0;
+            padding: 0 1em;
+            background: #369;
+            height: 3em;
+            list-style:none;
+        }
+
+        #navigation > li {
+            float: left;
+            height: 100%;
+            margin-right: 0.5em;
+            padding: 0 1em;
+        }
+
+        #navigation > li > a {
+            float: left;
+            height: 100%;
+            color: #fff;
+            text-decoration: none;
+            line-height: 3;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #navigation > li > a:hover {
+            color:#999;
+            text-decoration: underline;
+        }
+        
+        #navigation > li.sub {
+            position: relative;
+        }
+        
+        #navigation > li.sub ul {
+            width: 10em;
+            margin: 0;
+            padding: 0.5em 0;
+            list-style: none;
+            background: #369;
+            position: absolute;
+            top: -1000em;
+        }
+
+        #navigation > li.sub ul li {
+            width: 90%;
+            margin: 0 auto 0.3em auto;
+        }
+
+        #navigation > li.sub ul li a {
+            height: 100%;
+            display: block;
+            padding: 0.4em;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #navigation > li.sub ul li a:hover {
+            background:#999;
+            text-decoration: underline;
+        }
+        
+        #navigation > li.sub:hover ul {
+            top: 3em;
+        }
+        
+/****************Estilo General********************/
+        h4 { 
+            margin:10px 370px 15px 300px;
+            background: #369;
+            text-align: center;
+            color: #fff;
+            font-size: 18px;
+             
+        }
+        h3{
+            font-family: Verdana;
+            font-size: 12px;
+        }
+        h1{
+            text-align: center;
+        }
+        
+/*******Estilo Form********************************/
+        .login-block {            
+            float:left;
+            margin:20px 20px 5px 300px;
+            text-align:center;
+            width:50%;
+            border:solid #369;
+            font: 14px Georgia, serif; 
+        }
+        .login-block .active-form {
+            border-color:#d09e6d;
+        }
+
+        .login-block form p {
+            margin:0 0 0 75px;
+            text-align:left;
+            
+        }
+        
+        .login-block form fieldset {
+            margin:0 0 0 95px;
+            text-align:left;
+            
+        }
+
+        .login-block label {
+            color:#7C6767;
+            font-size:14px;
+        }
+
+        .login-block input[type="text"]{
+            border-color:#EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+            border-right:1px solid #CCCCCC;
+            border-style:solid;
+            border-width:2px;
+            font-size:15px;
+            margin:0 0 15px 20px;
+            padding:5px;
+            width:500px;
+            color: #369;
+        }
+        .login-block select{
+            border-color:#EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+            border-right:1px solid #CCCCCC;
+            border-style:solid;
+            border-width:2px;
+            font-size:15px;
+            margin:0 0 15px 20px;
+            padding:5px;
+            width:500px;
+        }
+        .login-block fieldset  {
+            border-color:#EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+            border-right:1px solid #CCCCCC;
+            border-style:solid;
+            border-width:2px;
+            font-size:15px;
+            margin:0 0 15px 5px;
+            padding:5px;
+            width:485px;            
+        }
+        
+        .login-block a.button {
+            text-decoration:none;
+            margin: 0 0 0 50px;
+        }
+        textarea.comment{
+               border-color:#EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+            border-right:1px solid #CCCCCC;
+            border-style:solid;
+            border-width:2px;
+            font-size:15px;
+            margin:0 0 15px 20px;
+            padding:5px;
+            width:500px;
+            color: #369;
+        }
+        .login-block input[type='submit']{
+            border-color:#EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+            border-right:1px solid #CCCCCC;
+            border-style:solid;
+            border-width:2px;
+            font-size:13px;
+            padding:3px;
+            margin: 0 0 0 450px;
+        }
+        button b{
+            border-color:#EEEEEE #CCCCCC #CCCCCC #EEEEEE;
+            border-right:1px solid #CCCCCC;
+            border-style:solid;
+            border-width:2px;
+            font-size:24px;
+            padding:3px;
+            margin: 0 0 0 450px;
+        }
+
+        .login-block input[type="text"]:focus,input[type='checkbox']:focus,textarea.comment:focus,select:focus {
+            border-color:#369;
+        }
+        .headers{
+            color: #000;
+            background: #E1E8F1;
+            font-size: 24px;
+            text-align: center;
+            font-family: Verdana;
+        }
+        .proces{
+            color: #000;
+            background: #E1E8F1;
+            font-size: 13px;
+            text-align:left;
+            font-family: Verdana;
+        }
+/**************Formato de Tablas************/
+        table.report {
+  border-collapse: collapse;
+  border-spacing: 10px;
+  border: 1px solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #BEBEBE;
+  empty-cells: show;
+}
+table.r td{
+    border-width: 0px;
+	padding: 2px;
+	border-color: #BEBEBE;
+	border-style: inset;
+
+}
+table.r tr:hover{
+        background: #DEDEDE;
+}
+        table.report td {
+	border-width: 1px;
+	padding: 2px;
+	border-color: #BEBEBE;
+	border-style: inset;
+                            font-family: Verdana;
+                    font-size: 11px;
+}
+
+        table.report tr:hover{
+  background: #DEDEDE;
+}
+
+        table.report img{
+    border: 0;
+}
+
+        table.report th {
+        border-width: 1px;
+        padding: 2px;
+        border-color: #BEBEBE;
+        border-style: inset;
+        font-size: 12px;
+        background: #DEDEDE;
+}
+
+        .fila_0 { background-color: #FFFFFF;}
+        
+        .fila_1 { background-color: #E1E8F1;}
+
+      div#container {
+        width: 580px;
+        margin: 100px auto 0 auto;
+        padding: 20px;
+        background: #000;
+        border: 1px solid #1a1a1a;
+      }
+      
+      /* HOVER STYLES */
+      div#pop-up {
+        display: none;
+        position: absolute;
+        width: 150px;
+        padding: 10px;
+        background: #eeeeee;
+        color: #000000;
+        border: 1px solid #1a1a1a;
+        font-size: 90%;
+      }
