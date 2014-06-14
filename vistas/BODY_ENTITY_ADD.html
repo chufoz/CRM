@@ -1,0 +1,68 @@
+<style type="text/css">
+table1 {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+tr {
+   border: 1px solid black;
+}
+td {
+   border: 1px solid black;
+}
+.tdbottom {
+   border-bottom: none ;
+}
+.tdtop {
+   border-top: none;
+}
+.tdtopright {
+   border-top: none;
+   border-right: none;
+}
+
+</style>  <font face="MS Shell Dlg" size="2"> <span style="font-weight: bold;">
+<table cellspacing="0" cellpadding="3" align="" width="800" summary="" class="table1">
+    <tbody>
+        <tr>
+            <td align="center" class="tdbottom" colspan="2">Ticket<a href="http://crm.ictcla.com/edit.php?e=@EID@"><strong> @ENTITYID@</strong></a> - Actividad <strong>Nueva</strong></td>
+        </tr>
+        <tr>
+            <td align="center" class="tdtop" colspan="2">Cliente: <strong>@CUSTOMER@</strong></td>
+        </tr>
+        <tr>
+            <td colspan="2" class="tdtop">Contacto: <strong>@CUSTOMER_CONTACT@</strong> - Telefono: <strong>@CONTACT_PHONE@</strong></td>
+        </tr>
+        <tr>
+            <td class="tdtopright">Asignado: <strong>@ASSIGNEE@</strong></td>
+            <td class="tdtop">Pertenece: <strong>@OWNER@</strong></td>
+        </tr>
+        <tr>
+            <td class="tdtopright">Creacion: <strong>@SDATE@</strong></td>
+            <td class="tdtop">Vencimiento: <strong>@DUEDATE@ @DUETIME@</strong></td>
+        </tr>
+        <tr>
+            <td class="tdtopright">Antiguedad: <strong>@AGE@</strong></td>
+            <td class="tdtop">Prioridad: <strong>@PRIORITY@</strong></td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<table cellspacing="0" cellpadding="3" border="0" align="" width="800" class="table1" summary="">
+    <tbody>
+        <tr>
+            <td align="center"><strong>Descripcion</strong></td>
+        </tr>
+        <tr>
+            <td class="tdtop">@CONTENTS@</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<table cellspacing="0" cellpadding="0" border="0" align="" width="800" class="table2" summary="">
+    <tbody>
+        <tr>
+            <td class="tdnone">#HISTORIAL#</td>
+        </tr>
+    </tbody>
+</table>
+</span></font>
